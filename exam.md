@@ -531,7 +531,38 @@ b.constructor === B.prototype.constructor
 #### [答案]
         new Thread(()->System.out.println("线程1--test")).start()
 ## [编码题] 输出1995-06-01 01:12:24 -- 2014-07-10 02:12:15的时间差
-#### [答案]
+#### [答案]import java.time.LocalDate;
+         import java.time.LocalTime;
+         import java.time.Month;
+         import java.time.temporal.ChronoUnit;
+
+         /**
+          * Created by lenovo on 2017/4/11.
+          */
+         public class aaa111 {
+             public static void main(String[] args) {
+                 LocalDate d1 = LocalDate.of(2014, Month.JULY, 10);
+
+                 LocalDate d2 = LocalDate.of(1995, Month.JUNE, 01);
+
+                 long daysBetween = ChronoUnit.DAYS.between(d2, d1);
+
+                 LocalTime t1 = LocalTime.of(02,12,15);
+
+
+                 LocalTime t2 = LocalTime.of(01,12,24);
+
+                 long hoursBetween = ChronoUnit.HOURS.between(t2, t1);
+
+                 long minutesBetween = ChronoUnit.MINUTES.between(t2, t1);
+
+                 long secondsBetween = ChronoUnit.SECONDS.between(t2, t1);
+
+
+                 System.out.println(daysBetween+"天"+hoursBetween+"小时"+minutesBetween+"分钟"+secondsBetween+"秒");
+             }
+         }
+
 
 # NPM/Bower
 
