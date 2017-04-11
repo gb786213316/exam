@@ -717,7 +717,7 @@ b.constructor === B.prototype.constructor
 ## [填空题] 从github上clone了一个前端项目；在使用bower管理项目中的依赖包时，我们可以使用___来下载刚clone的项目中的bower.json保存的package信息相关的前端包。
 
 #### [标签]
-* bower
+* Bower
 * 工具
 
 #### [答案]bower i
